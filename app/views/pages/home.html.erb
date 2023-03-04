@@ -1,1 +1,9 @@
-<h1>Wellcome</h1>
+<h1 class="my-5">Wellcome</h1>
+
+<div class="shadow rounded p-5">
+  <div class="card shadow rounded bg-light p-3 col-6 mb-3 text-center">
+    This has: <%= pluralize(@post.upvote, "Upvote") %>
+  </div>
+  <%= button_to "Upvote First Post", upvote_page_path(@post), method: :put, class: "btn btn-lg btn-success px-5" %>
+  <%= button_to "Downvote First Post", downvote_page_path(@post), method: :put, class: "btn btn-lg btn-danger px-5" %>
+</div>
